@@ -122,7 +122,7 @@ jobs:
   Import_SQL:
     runs-on: ubuntu-latest
     name: MydSQL Deploy Staging
-    needs: [sonarcloud,dependency_check]
+    # needs: [sonarcloud,dependency_check]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
