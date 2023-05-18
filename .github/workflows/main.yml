@@ -118,9 +118,10 @@ jobs:
           name: Depcheck report
           path: ${{github.workspace}}/reports
 
- Import_SQL:
+           
+  Import_SQL:
     runs-on: ubuntu-latest
-    name: MySQL Deploy Action
+    name: MydSQL Deploy Staging
     needs: [sonarcloud,dependency_check]
     steps:
       - name: Checkout
@@ -133,8 +134,8 @@ jobs:
             DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
             DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
             DATABASE_SCRIPT: script.sql
-            
-         
+
+
   deploy_staging:
     name: Deploy Staging
      if: github.ref == 'refs/heads/develop'
