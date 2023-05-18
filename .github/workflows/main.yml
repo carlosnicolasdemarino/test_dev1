@@ -80,6 +80,7 @@ jobs:
         with:
           dir: "src/"
 
+
  sonarcloud:
    name: Sonarcloud
    runs-on: ubuntu-latest
