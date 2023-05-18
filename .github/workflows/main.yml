@@ -103,7 +103,7 @@ jobs:
           name: Depcheck report
           path: ${{github.workspace}}/reports
 
- sonarcloud:
+sonarcloud:
    name: Sonarcloud
    runs-on: ubuntu-latest
    needs: [gitleaks,copy_paste_detector, phpstan, php_lint]
@@ -119,7 +119,7 @@ jobs:
        with:
          projectBaseDir: src/  
  
- 
+
             
   deploy_staging:
     name: Deploy Staging
